@@ -1,20 +1,21 @@
 # FAT32 File System Utility
 
-[Description]
+A C-based, shell-like utility for reading, navigating, and modifying FAT32 file system images without corrupting the disk image. It supports mounting an image, inspecting boot sector metadata, navigating directories, creating and deleting files/directories, and performing file I/O.
 
 ## Group Members
-- **John Doe**: jd19@fsu.edu
-- **Jane Smith**: js19@fsu.edu
-- **Alex Brown**: ab19@fsu.edu
+- **Kameryn Gartrell**: ksg22b@fsu.edu
+- **Matthew Chen**: mc23c@fsu.edu
+- **Tyler Dussault**: tjd22@fsu.edu
+
 ## Division of Labor
 
 ### Part 1: Mounting the Image
-- **Responsibilities**: [Description]
-- **Assigned to**: John Doe
+- **Responsibilities**: Mounted the FAT32 image, parsed the Boot Sector (BPB), built the shell loop and prompt, and implemented `info` and `exit`.
+- **Assigned to**: Kameryn Gartrell
 
 ### Part 2: Navigation
-- **Responsibilities**: [Description]
-- **Assigned to**: Jane Smith
+- **Responsibilities**: Implemented FAT cluster traversal, directory entry parsing, and the `ls` and `cd` commands with path tracking and error handling.
+- **Assigned to**: Kameryn Gartrell
 
 ### Part 3: Create
 - **Responsibilities**: [Description]
@@ -42,11 +43,12 @@ filesys/
 │
 ├── src/
 │ ├── lexer.c
-│ └── ...
+│ └── fat32.c
+│ └── main.c
 │
 ├── include/
 │ └── lexer.h
-│ └── ...
+│ └── fat32.h
 │
 ├── README.md
 └── Makefile
